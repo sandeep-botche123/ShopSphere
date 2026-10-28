@@ -1,0 +1,101 @@
+product_id,product_name,category_id,brand,cost_price,selling_price
+P001,Ambrane Power Bank,CAT01,Ambrane,2536.1,3702.0
+P002,Dell Laptop,CAT01,Dell,40838.43,48657.54
+P003,JBL Headphones,CAT01,JBL,5574.77,8945.59
+P004,Noise Smartwatch,CAT01,Noise,3455.67,4256.42
+P005,Mi Power Bank,CAT01,Mi,2642.69,3296.02
+P006,Boat Headphones,CAT01,Boat,13550.33,18459.51
+P007,Lenovo Tablet,CAT01,Lenovo,40744.28,58655.79
+P008,Samsung Smartwatch,CAT01,Samsung,13913.21,17233.16
+P009,Sony Headphones,CAT01,Sony,12857.8,15768.18
+P010,Apple Smartwatch,CAT01,Apple,13935.29,17954.54
+P011,Samsung Tablet,CAT01,Samsung,8075.02,12291.22
+P012,JBL Bluetooth Speaker,CAT01,JBL,3940.54,6356.25
+P013,Acer Laptop,CAT01,Acer,36223.82,57934.91
+P014,Logitech Wireless Mouse,CAT01,Logitech,1328.78,1750.88
+P015,Sony Bluetooth Speaker,CAT01,Sony,5405.16,7804.78
+P016,HP Laptop,CAT01,HP,36764.85,55140.84
+P017,Marshall Bluetooth Speaker,CAT01,Marshall,14313.4,18783.77
+P018,Apple Smartphone,CAT01,Apple,48994.76,76222.67
+P019,Dell Wireless Mouse,CAT01,Dell,2423.1,3781.07
+P020,Sennheiser Headphones,CAT01,Sennheiser,8459.25,9982.82
+P021,Apple Tablet,CAT01,Apple,31047.96,41999.99
+P022,OnePlus Smartphone,CAT01,OnePlus,68648.58,84676.8
+P023,Fire-Boltt Smartwatch,CAT01,Fire-Boltt,15521.9,23616.0
+P024,OnePlus Tablet,CAT01,OnePlus,7878.21,11605.01
+P025,Xiaomi Smartphone,CAT01,Xiaomi,24795.84,37986.98
+P026,Nike T-Shirt,CAT02,Nike,1621.07,2031.36
+P027,Skechers Sneakers,CAT02,Skechers,4433.83,7199.16
+P028,Nike Jacket,CAT02,Nike,4027.6,4743.76
+P029,HRX Track Pants,CAT02,HRX,2101.17,2493.17
+P030,Puma T-Shirt,CAT02,Puma,1590.39,2638.03
+P031,Roadster Jacket,CAT02,Roadster,5875.39,7626.14
+P032,Van Heusen Shirt,CAT02,Van Heusen,1648.1,2472.0
+P033,Adidas T-Shirt,CAT02,Adidas,1297.53,2066.5
+P034,Levis T-Shirt,CAT02,Levis,1091.83,1530.39
+P035,Levis Jeans,CAT02,Levis,3943.52,4815.26
+P036,Manyavar Kurta,CAT02,Manyavar,1382.3,1906.23
+P037,Nike Sneakers,CAT02,Nike,3239.58,3911.8
+P038,Adidas Track Pants,CAT02,Adidas,2418.93,3585.66
+P039,Puma Hoodie,CAT02,Puma,2674.82,3555.8
+P040,Nike Hoodie,CAT02,Nike,1273.99,1611.36
+P041,FabIndia Kurta,CAT02,FabIndia,2435.93,3065.39
+P042,Lee Jeans,CAT02,Lee,1873.29,3121.41
+P043,Peter England Shirt,CAT02,Peter England,1070.44,1769.71
+P044,Pepe Jeans Jeans,CAT02,Pepe Jeans,3865.93,4716.39
+P045,Roadster T-Shirt,CAT02,Roadster,1734.39,2562.33
+P046,Philips Mixer Grinder,CAT03,Philips,3376.07,4628.6
+P047,Milton Water Bottle,CAT03,Milton,371.53,566.21
+P048,Philips Electric Kettle,CAT03,Philips,1757.38,2352.34
+P049,Hawkins Cookware Set,CAT03,Hawkins,2263.85,3455.98
+P050,Bajaj Induction Cooktop,CAT03,Bajaj,1378.75,1819.47
+P051,Prestige Air Fryer,CAT03,Prestige,5386.48,6518.36
+P052,Cello Water Bottle,CAT03,Cello,1353.54,2191.2
+P053,Sujata Mixer Grinder,CAT03,Sujata,2630.14,3428.03
+P054,Havells Air Fryer,CAT03,Havells,4024.22,6356.6
+P055,Wonderchef Cookware Set,CAT03,Wonderchef,7020.48,9451.87
+P056,Philips Coffee Maker,CAT03,Philips,6904.29,8672.05
+P057,Philips Induction Cooktop,CAT03,Philips,3324.62,5133.74
+P058,Pigeon Electric Kettle,CAT03,Pigeon,982.18,1387.72
+P059,Prestige Induction Cooktop,CAT03,Prestige,2441.34,3406.1
+P060,Prestige Cookware Set,CAT03,Prestige,5914.03,7697.14
+P061,Milton Storage Container,CAT03,Milton,1847.11,2957.25
+P062,Philips Air Fryer,CAT03,Philips,5772.28,8428.83
+P063,Cello Storage Container,CAT03,Cello,1739.19,2626.52
+P064,Morphy Richards Coffee Maker,CAT03,Morphy Richards,3761.96,5282.51
+P065,Borosil Water Bottle,CAT03,Borosil,822.41,1228.14
+P066,Head & Shoulders Shampoo,CAT04,Head & Shoulders,218.33,323.84
+P067,Cetaphil Moisturizer,CAT04,Cetaphil,1086.89,1459.32
+P068,Minimalist Serum,CAT04,Minimalist,961.49,1221.73
+P069,Dove Conditioner,CAT04,Dove,183.33,245.73
+P070,Minimalist Sunscreen,CAT04,Minimalist,714.43,878.56
+P071,Aqualogica Sunscreen,CAT04,Aqualogica,375.39,446.79
+P072,Dove Shampoo,CAT04,Dove,170.72,264.09
+P073,Neutrogena Sunscreen,CAT04,Neutrogena,764.03,993.79
+P074,Lakme Sunscreen,CAT04,Lakme,342.7,544.0
+P075,Tresemme Conditioner,CAT04,Tresemme,603.49,912.23
+P076,Nivea Lip Balm,CAT04,Nivea,299.87,397.26
+P077,Nivea Moisturizer,CAT04,Nivea,555.7,744.99
+P078,The Ordinary Serum,CAT04,The Ordinary,991.02,1188.73
+P079,Nivea Body Lotion,CAT04,Nivea,314.94,404.26
+P080,Vaseline Lip Balm,CAT04,Vaseline,153.31,219.34
+P081,Nike Football,CAT05,Nike,2095.94,2837.52
+P082,Nike Gym Gloves,CAT05,Nike,1179.18,1883.99
+P083,Li-Ning Badminton Racket,CAT05,Li-Ning,5914.3,8878.77
+P084,MRF Cricket Bat,CAT05,MRF,10614.39,13511.12
+P085,Kobo Dumbbells,CAT05,Kobo,804.21,1199.52
+P086,Boldfit Gym Gloves,CAT05,Boldfit,451.25,658.07
+P087,Strauss Resistance Bands,CAT05,Strauss,1194.43,1468.75
+P088,Gray Nicolls Cricket Bat,CAT05,Gray Nicolls,5516.33,8323.02
+P089,SS Cricket Bat,CAT05,SS,8430.84,13760.15
+P090,Puma Football,CAT05,Puma,2195.96,2720.0
+P091,Adidas Running Shoes,CAT05,Adidas,1431.82,2095.17
+P092,Strauss Yoga Mat,CAT05,Strauss,698.82,827.05
+P093,Adidas Football,CAT05,Adidas,757.02,1065.54
+P094,Boldfit Yoga Mat,CAT05,Boldfit,1676.0,2264.17
+P095,Boldfit Dumbbells,CAT05,Boldfit,839.13,1003.43
+P096,Amazon Basics Yoga Mat,CAT05,Amazon Basics,1419.54,2227.55
+P097,Adidas Gym Gloves,CAT05,Adidas,250.09,361.25
+P098,Asics Running Shoes,CAT05,Asics,6338.08,8959.09
+P099,Yonex Badminton Racket,CAT05,Yonex,818.91,1184.83
+P100,Kobo Resistance Bands,CAT05,Kobo,1590.2,1886.25
