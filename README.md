@@ -1,19 +1,34 @@
 
-# ShopSphere — E-commerce Sales Analysis
-## Project Overview
-ShopSphere is an end-to-end e-commerce data analytics project that analyzes sales, customers, products, categories, payments, deliveries, and customer reviews using SQL, Python, Pandas, and Power BI.
+# 🛒 ShopSphere — E-commerce Sales Analytics
 
-The goal is to transform raw e-commerce data into meaningful business insights and visualize key performance indicators through an interactive dashboard.
+An end-to-end data analytics project exploring e-commerce sales, customers, products, deliveries, and customer reviews using **MySQL, Python, Pandas, and Power BI**.
 
-## Tools & Technologies
-- **SQL / MySQL** — Database design, joins, aggregations, and business analysis
+## 📊 Dashboard Preview
+
+![ShopSphere Power BI Dashboard](Dashboard%20%282%29.png)
+
+## 🎯 Project Overview
+
+ShopSphere is an e-commerce analytics project built to transform raw transactional data into meaningful business insights. It combines SQL-based analysis, Python data processing, and Power BI visualizations to help understand sales performance and key business metrics.
+
+**Project objectives:**
+- Analyze revenue and monthly sales trends.
+- Evaluate product and category performance.
+- Understand customer purchasing behavior.
+- Examine order cancellations and delivery performance.
+- Explore customer ratings and product profitability.
+
+## 🛠️ Tech Stack
+
+- **MySQL** — Relational database design and SQL analysis
 - **Python** — Data processing and analysis
 - **Pandas & NumPy** — Data cleaning and manipulation
-- **Power BI** — Interactive dashboard and KPI visualization
+- **Power BI** — KPI visualization and dashboard development
 - **Git & GitHub** — Version control and project hosting
 
-## Dataset Overview
-The project uses a synthetic e-commerce dataset containing:
+## 📁 Dataset Overview
+
+The project uses a synthetic e-commerce dataset with the following tables:
 
 | Table | Records |
 |---|---:|
@@ -26,29 +41,35 @@ The project uses a synthetic e-commerce dataset containing:
 | Deliveries | 17,142 |
 | Reviews | 7,028 |
 
-## Project Workflow
-1. Designed a relational database in MySQL.
-2. Generated and organized synthetic e-commerce data.
-3. Analyzed business performance using SQL queries.
-4. Processed and analyzed data using Python and Pandas.
-5. Exported analysis results to CSV files.
-6. Built a Power BI dashboard to monitor important business KPIs.
+## 📈 Key Performance Indicators
 
-## Key Business Metrics
-- Net Revenue: ₹693.91M
-- Delivered Orders: 17,142
-- Average Order Value (AOV): ₹40,480.14
-- Delivered Customers: 2,437
-- Cancellation Rate: 14.29%
-- Average Delivery Time: 4.51 days
+| KPI | Dashboard Value |
+|---|---:|
+| Net Revenue | ₹693.91M |
+| Delivered Orders | 17,142 |
+| Average Order Value (AOV) | ₹40,480.14 |
+| Delivered Customers | 2,437 |
+| Cancellation Rate | 14.29% |
+| Average Delivery Time | 4.51 days |
 
-*Metrics are based on the current project dataset and dashboard.*
+*Values reflect the current project dashboard and dataset.*
 
-## Power BI Dashboard
+## 🔍 Analysis Performed
 
-![ShopSphere Power BI Dashboard](Dashboard%20%282%29.png)
+### SQL Analysis
+- Revenue and monthly sales analysis
+- Category and product performance
+- Customer and city-level performance
+- Product profitability and ratings
+- Order and delivery status analysis
 
-The dashboard includes:
+### Python Analysis
+- Data processing and cleaning
+- Aggregation and KPI calculations
+- Analysis result generation
+- Exporting processed results to CSV files
+
+### Power BI Dashboard
 - Monthly Revenue Trend
 - Net Revenue
 - Delivered Orders
@@ -57,9 +78,18 @@ The dashboard includes:
 - Cancellation Rate
 - Average Delivery Time
 
-Dashboard file: `powerbi/ShopSphere_Dashboard.pbix`
+## 🔄 Project Workflow
 
-## Project Structure
+1. Create the relational database and tables in MySQL.
+2. Generate and organize the synthetic dataset.
+3. Perform business analysis using SQL queries.
+4. Process and analyze data using Python and Pandas.
+5. Export analysis results into processed CSV files.
+6. Build a Power BI dashboard to visualize key metrics.
+7. Publish the project and documentation on GitHub.
+
+## 🗂️ Repository Structure
+
 ```text
 ShopSphere/
 ├── DataBase/
@@ -79,40 +109,64 @@ ShopSphere/
 │   ├── analysis.py
 │   ├── data_cleaning.py
 │   └── load_delivery.py
-└── .gitignore
+├── Dashboard (2).png
+├── .gitignore
+└── README.md
 ```
 
-##How to Run the Project
+## 🚀 How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sandeep-botche123/ShopSphere.git
-   cd ShopSphere
-   ```
-2. Create and activate a Python virtual environment.
-3. Install the required Python packages used by the project, including:
-   ```bash
-   pip install pandas numpy matplotlib mysql-connector-python python-dotenv
-   ```
-4. Create a local `.env` file in the project root with your own MySQL connection settings:
-   ```text
-   DB_HOST=localhost
-   DB_USER=your_mysql_username
-   DB_PASSWORD=your_mysql_password
-   DB_NAME=shopsphere
-   ```
-5. Create the database and tables using the SQL scripts in the `DataBase/` folder, then load the data.
-6. Run the Python scripts from the project root using your configured Python environment.
-7. Open `powerbi/ShopSphere_Dashboard.pbix` in Power BI Desktop to explore the dashboard.
+### 1. Clone the repository
 
-## Key Learnings
-- Relational database design and SQL analysis
-- Data cleaning and manipulation with Python
-- Business KPI calculation and trend analysis
+```bash
+git clone https://github.com/sandeep-botche123/ShopSphere.git
+cd ShopSphere
+```
+
+### 2. Set up Python
+
+Create and activate a virtual environment, then install the required packages:
+
+```bash
+pip install pandas numpy matplotlib mysql-connector-python python-dotenv
+```
+
+### 3. Configure MySQL
+
+- Ensure MySQL Server is installed and running.
+- Create a local `.env` file in the project root with your own database credentials:
+
+```text
+DB_HOST=localhost
+DB_USER=your_mysql_username
+DB_PASSWORD=your_mysql_password
+DB_NAME=shopsphere
+```
+
+- Execute the SQL scripts in the `DataBase/` folder in the appropriate order to create and populate the database.
+
+### 4. Run the Python scripts
+
+Use the configured Python environment to run the relevant scripts from the project root. Check each script for its execution requirements.
+
+### 5. Open the dashboard
+
+Open `powerbi/ShopSphere_Dashboard.pbix` using Power BI Desktop.
+
+## 📚 Skills Demonstrated
+
+- Relational database design
+- SQL joins, aggregations, and business queries
+- Python programming and data analysis
+- Data cleaning and transformation
+- KPI calculation and trend analysis
 - Power BI dashboard development
-- Organizing and publishing an analytics project with GitHub
+- Git and GitHub project management
 
-## Author
+## 👨‍💻 Author
+
 **Botche Sandeep**
 
 Aspiring Data Analyst | Python | SQL | Power BI
+
+[GitHub Repository](https://github.com/sandeep-botche123/ShopSphere)
