@@ -45,6 +45,9 @@ The project uses a synthetic e-commerce dataset containing:
 *Metrics are based on the current project dataset and dashboard.*
 
 ## Power BI Dashboard
+
+![ShopSphere Power BI Dashboard](Dashboard%20%282%29.png)
+
 The dashboard includes:
 - Monthly Revenue Trend
 - Net Revenue
