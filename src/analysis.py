@@ -1024,9 +1024,7 @@ product_profitability = (
 )
 
 product_profitability = product_profitability.merge(
-    products[
-        ["product_id", "product_name", "cost_price"]
-    ],
+    products[["product_id", "product_name", "cost_price"]],
     on="product_id",
     how="left"
 )
@@ -1054,26 +1052,21 @@ product_profitability = product_profitability.sort_values(
 
 print("\n--- Product Profitability ---")
 print(product_profitability)
-
 # ==========================================
 # CATEGORY PROFITABILITY
 # ==========================================
 
 category_sales = delivered_sales.merge(
-    products[
-        ["product_id", "category_id", "cost_price"]
-    ],
+    products[["product_id", "category_id", "cost_price"]],
     on="product_id",
     how="left"
 )
 
-# Calculate cost for each sold item
 category_sales["total_cost"] = (
     category_sales["quantity"]
     * category_sales["cost_price"]
 )
 
-# Aggregate category performance
 category_profitability = (
     category_sales
     .groupby("category_id", as_index=False)
@@ -1084,27 +1077,23 @@ category_profitability = (
     )
 )
 
-# Calculate profit
 category_profitability["profit"] = (
     category_profitability["net_revenue"]
     - category_profitability["total_cost"]
 )
 
-# Calculate profit margin
 category_profitability["profit_margin_pct"] = (
     category_profitability["profit"]
     / category_profitability["net_revenue"]
     * 100
 )
 
-# Add category name
 category_profitability = category_profitability.merge(
-    categories,
+    categories[["category_id", "category_name"]],
     on="category_id",
     how="left"
 )
 
-# Sort by profit
 category_profitability = category_profitability.sort_values(
     "profit",
     ascending=False
@@ -1112,15 +1101,23 @@ category_profitability = category_profitability.sort_values(
 
 print("\n--- Category Profitability ---")
 print(category_profitability)
+# ==========================================
+# EXPORT ANALYSIS RESULTS
+# ==========================================
 
 from pathlib import Path
 
-# Create the processed-data folder path
 project_root = Path(__file__).resolve().parent.parent
+
 processed_folder = project_root / "data" / "processed"
+
 processed_folder.mkdir(parents=True, exist_ok=True)
 
-# Analysis results to export
+# Create running revenue DataFrame
+running_revenue = daily_sales[
+    ["order_date", "net_revenue", "cumulative_revenue"]
+].copy()
+
 analysis_results = {
     "monthly_sales": "monthly_sales",
     "daily_sales": "daily_sales",
@@ -1137,16 +1134,19 @@ analysis_results = {
     "delivery_status_summary": "delivery_status_summary",
 }
 
-# Save available DataFrames as CSV files
 for file_name, variable_name in analysis_results.items():
+
     df = globals().get(variable_name)
 
     if isinstance(df, pd.DataFrame):
+
         df.to_csv(
             processed_folder / f"{file_name}.csv",
             index=False
         )
+
         print(f"Saved: {file_name}.csv")
+
     else:
         print(f"Skipped: {variable_name} (DataFrame not found)")
 
