@@ -44,7 +44,7 @@ The project uses a synthetic e-commerce dataset with the following tables:
 ## 📈 Key Performance Indicators
 
 | KPI | Dashboard Value |
-|---|---:|
+|---|---:| 
 | Net Revenue | ₹693.91M |
 | Delivered Orders | 17,142 |
 | Average Order Value (AOV) | ₹40,480.14 |
@@ -55,7 +55,6 @@ The project uses a synthetic e-commerce dataset with the following tables:
 *Values reflect the current project dashboard and dataset.*
 
 ## 🔍 Analysis Performed
-
 ### SQL Analysis
 - Revenue and monthly sales analysis
 - Category and product performance
@@ -68,6 +67,33 @@ The project uses a synthetic e-commerce dataset with the following tables:
 - Aggregation and KPI calculations
 - Analysis result generation
 - Exporting processed results to CSV files
+## 📊 Python Data Visualizations
+
+The following charts were created using Python, Pandas, and Matplotlib to analyze sales performance, customer segments, product profitability, and delivery operations.
+
+### 1. Monthly Revenue Trend
+![Monthly Revenue](visualizations/monthly_revenue.png)
+
+### 2. Top 10 Products by Revenue
+![Top Products Revenue](visualizations/top_products_revenue.png)
+
+### 3. Customer Segment Revenue Contribution
+![Customer Segments](visualizations/customer_segments.png)
+
+### 4. City-wise Revenue
+![City Revenue](visualizations/city_revenue.png)
+
+### 5. Delivery Status Distribution
+![Delivery Status](visualizations/delivery_status.png)
+
+### 6. Top 10 Products by Profit
+![Top Products Profit](visualizations/top_products_profit.png)
+
+### 7. Profit by Category
+![Category Profit](visualizations/category_profit.png)
+
+### 8. Category Revenue
+![Category Revenue](visualizations/category_revenue.png)
 
 ### Power BI Dashboard
 - Monthly Revenue Trend
