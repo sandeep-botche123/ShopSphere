@@ -55,6 +55,7 @@ The project uses a synthetic e-commerce dataset with the following tables:
 *Values reflect the current project dashboard and dataset.*
 
 ## 🔍 Analysis Performed
+This project performs end-to-end e-commerce data analysis using SQL and Python to identify business trends, customer behavior, sales performance, and product profitability.
 ### SQL Analysis
 - Revenue and monthly sales analysis
 - Category and product performance
