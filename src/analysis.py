@@ -1,5 +1,9 @@
 from Database import load_data
 import pandas as pd
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+VISUALIZATION_FOLDER = PROJECT_ROOT / "visualizations"
+VISUALIZATION_FOLDER.mkdir(parents=True, exist_ok=True)
 
 
 # Load ShopSphere tables
@@ -227,7 +231,17 @@ plt.xticks(rotation=30)
 
 plt.tight_layout()
 
-plt.show()
+
+
+project_root = Path(__file__).resolve().parent.parent
+
+plt.savefig(
+    project_root / "visualizations" / "category_revenue.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
 
 # ==========================================
 # CUSTOMER PERFORMANCE ANALYSIS
@@ -327,7 +341,30 @@ segment_summary = (
 
 print("\n--- Customer Segment Summary ---")
 print(segment_summary)
+# ==========================================
+# CUSTOMER SEGMENT REVENUE CONTRIBUTION
+# ==========================================
 
+plt.figure(figsize=(8, 5))
+
+plt.pie(
+    segment_summary["total_revenue"],
+    labels=segment_summary["customer_segment"],
+    autopct="%1.1f%%",
+    startangle=90
+)
+
+plt.title("Revenue Contribution by Customer Segment")
+
+plt.tight_layout()
+
+plt.savefig(
+    VISUALIZATION_FOLDER / "customer_segments.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.close()
 segment_summary["revenue_contribution_pct"] = (
     segment_summary["total_revenue"]
     / segment_summary["total_revenue"].sum()
@@ -378,6 +415,32 @@ top_cities = city_performance.head(5)
 
 print("\n--- Top Revenue Cities ---")
 print(top_cities)
+# ==========================================
+# CITY-WISE REVENUE VISUALIZATION
+# ==========================================
+
+plt.figure(figsize=(10, 6))
+
+plt.barh(
+    city_performance["city"],
+    city_performance["total_revenue"]
+)
+
+plt.title("City-wise Revenue Performance")
+plt.xlabel("Net Revenue (₹)")
+plt.ylabel("City")
+
+plt.gca().invert_yaxis()
+
+plt.tight_layout()
+
+plt.savefig(
+    VISUALIZATION_FOLDER / "city_revenue.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.close()
 # ==========================================
 # ORDER STATUS ANALYSIS
 # ==========================================
@@ -599,6 +662,30 @@ delivery_status_summary["percentage"] = (
 
 print("\n--- Delivery Status Summary ---")
 print(delivery_status_summary)# ==========================================
+# ==========================================
+# DELIVERY STATUS VISUALIZATION
+# ==========================================
+
+plt.figure(figsize=(8, 5))
+
+plt.bar(
+    delivery_status_summary["delivery_status"],
+    delivery_status_summary["order_count"]
+)
+
+plt.title("Delivery Status Distribution")
+plt.xlabel("Delivery Status")
+plt.ylabel("Number of Orders")
+
+plt.tight_layout()
+
+plt.savefig(
+    VISUALIZATION_FOLDER / "delivery_status.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.close()
 # ==========================================
 # REVIEW ANALYSIS
 # ==========================================
@@ -892,7 +979,63 @@ monthly_sales = (
 print("\n--- Monthly Sales Trend ---")
 
 print(monthly_sales)
+# ==========================================
+# MONTHLY REVENUE TREND VISUALIZATION
+# ==========================================
 
+plt.figure(figsize=(10, 5))
+
+plt.plot(
+    monthly_sales["month"],
+    monthly_sales["net_revenue"],
+    marker="o",
+    linewidth=2
+)
+
+plt.title("Monthly Revenue Trend")
+plt.xlabel("Month")
+plt.ylabel("Net Revenue (₹)")
+
+plt.xticks(rotation=45)
+plt.grid(True, alpha=0.3)
+
+plt.tight_layout()
+
+plt.savefig(
+    VISUALIZATION_FOLDER / "monthly_revenue.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.close()
+# ==========================================
+# TOP 10 PRODUCTS BY REVENUE
+# ==========================================
+
+top_10_products = product_revenue.head(10)
+
+plt.figure(figsize=(10, 6))
+
+plt.barh(
+    top_10_products["product_name"],
+    top_10_products["net_revenue"]
+)
+
+plt.title("Top 10 Products by Net Revenue")
+plt.xlabel("Net Revenue (₹)")
+plt.ylabel("Product Name")
+
+plt.gca().invert_yaxis()
+
+plt.tight_layout()
+
+plt.savefig(
+    VISUALIZATION_FOLDER / "top_products_revenue.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.close()
 print("\n--- Monthly Revenue Validation ---")
 
 print(
@@ -1053,6 +1196,34 @@ product_profitability = product_profitability.sort_values(
 print("\n--- Product Profitability ---")
 print(product_profitability)
 # ==========================================
+# TOP 10 PRODUCTS BY PROFIT
+# ==========================================
+
+top_10_profit = product_profitability.head(10)
+
+plt.figure(figsize=(10, 6))
+
+plt.barh(
+    top_10_profit["product_name"],
+    top_10_profit["profit"]
+)
+
+plt.title("Top 10 Products by Profit")
+plt.xlabel("Profit (₹)")
+plt.ylabel("Product Name")
+
+plt.gca().invert_yaxis()
+
+plt.tight_layout()
+
+plt.savefig(
+    VISUALIZATION_FOLDER / "top_products_profit.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.close()
+# ==========================================
 # CATEGORY PROFITABILITY
 # ==========================================
 
@@ -1101,6 +1272,31 @@ category_profitability = category_profitability.sort_values(
 
 print("\n--- Category Profitability ---")
 print(category_profitability)
+# ==========================================
+# CATEGORY PROFITABILITY VISUALIZATION
+# ==========================================
+
+plt.figure(figsize=(9, 5))
+
+plt.bar(
+    category_profitability["category_name"],
+    category_profitability["profit"]
+)
+
+plt.title("Profit by Category")
+plt.xlabel("Category")
+plt.ylabel("Profit (₹)")
+
+plt.xticks(rotation=30)
+plt.tight_layout()
+
+plt.savefig(
+    VISUALIZATION_FOLDER / "category_profit.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.close()
 # ==========================================
 # EXPORT ANALYSIS RESULTS
 # ==========================================
