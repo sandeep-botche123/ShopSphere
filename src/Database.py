@@ -5,24 +5,35 @@ import os
 
 load_dotenv()
 
+def get_db_config(key, default=None):
+    value = os.getenv(key)
+
+    if value:
+        return value
+
+    try:
+        import streamlit as st
+        return st.secrets.get(key, default)
+    except Exception:
+        return default
+
 # ==========================================
 # CREATE MYSQL DATABASE CONNECTION
 # ==========================================
 
 def create_engine_connection():
-
     connection_url = URL.create(
         drivername="mysql+mysqlconnector",
-        username=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        host=os.getenv("DB_HOST"),
-        database=os.getenv("DB_NAME")
-
+        username=get_db_config("DB_USER"),
+        password=get_db_config("DB_PASSWORD"),
+        host=get_db_config("DB_HOST"),
+        port=int(get_db_config("DB_PORT", 4000)),
+        database=get_db_config("DB_NAME")
     )
 
     engine = create_engine(connection_url)
-
     return engine
+
 
 
 # ==========================================
