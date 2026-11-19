@@ -2,7 +2,20 @@
 # 🛒 ShopSphere — E-commerce Sales Analytics
 
 An end-to-end data analytics project exploring e-commerce sales, customers, products, deliveries, and customer reviews using **MySQL, Python, Pandas, and Power BI**.
+## 🚀 Live Dashboard
 
+🔗 **Live Streamlit Dashboard:** [View ShopSphere](https://sandeep-botche123-shopsphere-appapp-f13xtw.streamlit.app/)
+
+### 📊 Dashboard Preview
+
+#### Dashboard Overview
+![Dashboard Overview](screenshots/dashboard_overview.png)
+
+#### Customer Analytics
+![Customer Analytics](screenshots/customer_analytics.png)
+
+#### Product Exploration
+![Product Exploration](screenshots/product_exploration.png)
 ## 📊 Dashboard Preview
 
 ![ShopSphere Power BI Dashboard](Dashboard%20%282%29.png)
