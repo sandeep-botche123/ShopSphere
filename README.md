@@ -33,11 +33,17 @@ ShopSphere is an e-commerce analytics project built to transform raw transaction
 
 ## 🛠️ Tech Stack
 
-- **MySQL** — Relational database design and SQL analysis
-- **Python** — Data processing and analysis
-- **Pandas & NumPy** — Data cleaning and manipulation
-- **Power BI** — KPI visualization and dashboard development
-- **Git & GitHub** — Version control and project hosting
+- **MySQL** – Relational database design and SQL analysis
+- **MySQL Workbench** – Database management and SQL query execution
+- **Python** – Data processing and analysis
+- **Pandas & NumPy** – Data cleaning and manipulation
+- **Matplotlib** – Data visualization
+- **Power BI** – KPI visualization and dashboard development
+- **Streamlit** – Interactive analytics web application
+- **TiDB Cloud** – Cloud-hosted MySQL-compatible database
+- **SQLAlchemy & MySQL Connector** – Database connectivity
+- **Git & GitHub** – Version control and project hosting
+- **Streamlit Community Cloud** – Application deployment
 
 ## 📁 Dataset Overview
 
@@ -120,13 +126,17 @@ The following charts were created using Python, Pandas, and Matplotlib to analyz
 
 ## 🔄 Project Workflow
 
-1. Create the relational database and tables in MySQL.
-2. Generate and organize the synthetic dataset.
-3. Perform business analysis using SQL queries.
-4. Process and analyze data using Python and Pandas.
-5. Export analysis results into processed CSV files.
-6. Build a Power BI dashboard to visualize key metrics.
-7. Publish the project and documentation on GitHub.
+1. Designed the relational database schema and created tables using MySQL.
+2. Generated synthetic e-commerce data using Python.
+3. Validated data consistency and loaded datasets into the database.
+4. Performed business analysis using SQL queries in MySQL Workbench.
+5. Cleaned, processed, and analyzed data using Python, Pandas, and NumPy.
+6. Created visualizations using Matplotlib to identify trends and business insights.
+7. Developed an interactive Power BI dashboard to monitor sales, profit, customers, products, and delivery performance.
+8. Built a Streamlit web application for interactive data exploration and analytics.
+9. Connected the application to the cloud database hosted on TiDB Cloud.
+10. Deployed the Streamlit application using Streamlit Community Cloud.
+11. Uploaded project code, analysis, and documentation to GitHub.
 
 ## 🗂️ Repository Structure
 
@@ -193,20 +203,24 @@ Use the configured Python environment to run the relevant scripts from the proje
 
 Open `powerbi/ShopSphere_Dashboard.pbix` using Power BI Desktop.
 
-## 📚 Skills Demonstrated
+## 📊 Skills Demonstrated
 
-- Relational database design
-- SQL joins, aggregations, and business queries
-- Python programming and data analysis
-- Data cleaning and transformation
-- KPI calculation and trend analysis
-- Power BI dashboard development
-- Git and GitHub project management
-
+- Relational database design and data modeling
+- SQL querying, joins, aggregations, CTEs, and window functions
+- Python programming for data analytics
+- Data cleaning, transformation, and validation
+- Exploratory Data Analysis (EDA)
+- KPI calculation and business performance analysis
+- Data visualization using Matplotlib
+- Interactive dashboard development using Power BI
+- Web application development using Streamlit
+- Cloud database integration using TiDB Cloud
+- Database connectivity using SQLAlchemy and MySQL Connector
+- Application deployment using Streamlit Community Cloud
+- Version control and project management using Git and GitHub
+  
 ## 👨‍💻 Author
-
 **Botche Sandeep**
-
 Aspiring Data Analyst | Python | SQL | Power BI
 
 [GitHub Repository](https://github.com/sandeep-botche123/ShopSphere)
